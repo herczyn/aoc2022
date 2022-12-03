@@ -1,25 +1,25 @@
 package main
 
 import (
-    "bufio"
-    "fmt"
-    "os"
+	"bufio"
+	"fmt"
+	"os"
 )
 
 func main() {
 	readFile, err := os.Open("data2")
-    if err != nil {
-        fmt.Println(err)
-    }
+	if err != nil {
+		fmt.Println(err)
+	}
 	
 	sum := 0;
 
-    fileScanner := bufio.NewScanner(readFile)
+	fileScanner := bufio.NewScanner(readFile)
  
-    fileScanner.Split(bufio.ScanLines)
+	fileScanner.Split(bufio.ScanLines)
   
-    for fileScanner.Scan() {
-    	line := fileScanner.Text();
+	for fileScanner.Scan() {
+		line := fileScanner.Text();
 		// if line[2] == 'X' {
 		// 	sum += 1;
 		// }
